@@ -4,7 +4,7 @@
 <head>
     <title>Whatsapp 2.0</title>
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.1.2/css/material-design-iconic-font.min.css" />
-<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <style>
 /*inspired from codepen.io*/
 html {
@@ -546,9 +546,10 @@ var codeArray = codingConcat;
 */
 var codeArray = codes.map( item => coding + " " + item);
 var funny=["YOU'RE FUNNY", "HA", "HA-HA", "NICE JOKE", "GOOD JOKE", "LOL"];
-var bad_expression = ["BAD", "NOT GOOD"]
+var bad_expression = ["BAD", "NOT GOOD", "TERRIBLE"];
   //matching with user input
  function isInArray(x, y) { return x.indexOf(y) > -1; }
+isInArray(bad_expression, lastmsg)==true?(smsg="I hope your day gets better!"):
 isInArray(funny, lastmsg)==true?(smsg="I know, I'm so funny!"):
 isInArray(hello, lastmsg)==true?(smsg="Hello, How are you? 😊", k="Hello, How are you? "):
 isInArray(yes, lastmsg)==true?(smsg="Yes", k=smsg):
