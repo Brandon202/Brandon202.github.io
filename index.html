@@ -546,7 +546,7 @@ var codeArray = codingConcat;
 */
 var codeArray = codes.map( item => coding + " " + item);
 var funny=["YOU'RE FUNNY", "HA", "HA-HA", "NICE JOKE", "GOOD JOKE", "LOL"];
-var badExpression = ["BAD", "NOT GOOD", "TERRIBLE"];
+var badExpression = ["BAD", "NOT GOOD", "TERRIBLE", "HORRIBLE"];
   //matching with user input
  function isInArray(x, y) { return x.indexOf(y) > -1; }
 isInArray(badExpression, lastmsg)==true?(smsg="I hope your day gets better!"):
@@ -586,7 +586,7 @@ setTimeout(function() { $('#ap').append(para);
 $(".status").html("online");
 //autoscroll 
 $(".conversation-container").scrollTop(scroll);
-},1100);
+},2100);
 }
 //});
 });
