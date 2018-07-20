@@ -430,6 +430,7 @@ cursor: pointer;
     textBox.value = textBox.value.charAt(0).toUpperCase() + textBox.value.slice(1).toLowerCase();
     textBox.setSelectionRange(start, end);
 });
+// Created by Nikky Amresh
 var console = function(){};
 console.log = function(){};
 $(function() {
@@ -515,10 +516,10 @@ var p = "Kay-kay.";
  //matching with user input
  var hello=["HELLO","HI", "HELLO BRANDON","HEY THERE","HEY","HI DUDE","HI BRANDON"];
  var gm=["GM","GOOD MORNING","GOOD MORNING BRANDON", "GOOD MORNING BRANDON"];
- var bad=["USELESS","NOT WORKING"];
+ var bad=[/*"BAD","NOT BAD",*/"USELESS","NOT WORKING",/*"NOT GOOD"*/];
  var ge=["GOOD EVNG","GOOD EVENING","GOOD EVENING BRANDON","GOOD EVENING BRANDON"];
  var gn=["GOON NIGHT","I'M FEELING SLEEPY"];
- var welcome=["COOL", "NICE WORKING", "NICE CODE","NICE","WOW","WOW IT'S WORKING","GREAT CODE","AWESOME CODE","IT'S NICE","AWESOME CODE BRO","IT'S GOOD","OH MY GOD","OMG","OHO","NICE TO MEET YOU","NICE TO MEET U","NICE TO SEE YOU","NICE TO C U","YOU ARE GREAT", "YOU ARE AWESOME"];
+ var welcome=["NICE WORKING", "NICE CODE","NICE","WOW","WOW IT'S WORKING","GREAT CODE","AWESOME CODE","IT'S NICE","AWESOME CODE BRO","IT'S GOOD","OH MY GOD","OMG","OHO","NICE TO MEET YOU","NICE TO MEET U","NICE TO SEE YOU","NICE TO C U","YOU ARE GREAT", "YOU ARE AWESOME"];
  var s2u=["I HATE YOU","I LOVE YOU","I MISS YOU"];
  var gaf=["GOOD AFTERNOON","GOOD AFTERNOON BRANDON","GOOD AFTERNOON BRANDON PALTOO" ];
  var ly=["NO YOU ARE LYING", "NO YOU ARE LIAR","NO", "NOPE", "NO YOU ARE WRONG"];
@@ -532,11 +533,11 @@ var p = "Kay-kay.";
   var th=["THANKS","THANK YOU"];
   var st=["SHUT UP","SHUT YOUR MOUTH", "ZIP IT"];
   var qu=["WHAT","WHAT?","WHICH","WHICH?","WHEN","WHEN?","REALLY?"];
-  var ok=["HMM","HMMM","HMMMM","OKAY","OK","KK","OKK","OK?","OK ?","YEAH", "I LOVE CODING"];
+  var ok=["HMM","HMMM","HMMMM","OKAY","OK","KK","OKK","OK?","OK ?","YEAH"];
   var codes=["HTML", "CSS", "JS", "JAVASCRIPT", "PHP", "KOTLIN", "RUBY", "JQUERY", "GIT", "SWIFT", "C", "ANGULAR JS", "PYTHON", "BOOTSTRAP", "SQL", "JAVA", "ECMASCRIPT 6", "ECMASCRIPT6", "ES6", "C++"];
 var coding = "I STARTED TO LEARN";
 var codingConcat = [];
-// The comment is another way to do line 547, but line 547 is neater and cleaner
+
 /*for(i=0;i<codes.length;i++){
  var temp = (coding + " " + codes[i]);
  codingConcat.push(temp);
@@ -546,10 +547,9 @@ var codeArray = codingConcat;
 */
 var codeArray = codes.map( item => coding + " " + item);
 var funny=["YOU'RE FUNNY", "HA", "HA-HA", "NICE JOKE", "GOOD JOKE", "LOL"];
-var badExpression = ["BAD", "NOT GOOD", "TERRIBLE", "HORRIBLE"];
+var bad_expression = ["BAD", "NOT GOOD"]
   //matching with user input
  function isInArray(x, y) { return x.indexOf(y) > -1; }
-isInArray(badExpression, lastmsg)==true?(smsg="I hope your day gets better!"):
 isInArray(funny, lastmsg)==true?(smsg="I know, I'm so funny!"):
 isInArray(hello, lastmsg)==true?(smsg="Hello, How are you? 😊", k="Hello, How are you? "):
 isInArray(yes, lastmsg)==true?(smsg="Yes", k=smsg):
@@ -557,8 +557,8 @@ isInArray(wru, lastmsg)==true?(smsg="I am Brandon Paltoo, the most awesome coder
 isInArray(bad, lastmsg)==true?(smsg="Thanks for your precious feedback, I'll try to improve that.😇", k=smsg):
 isInArray(wrud, lastmsg)==true?(k="Nothing special and you? ", smsg=k+"☺️"):
 isInArray(bye, lastmsg)==true?(smsg="Thanks for checking my code, ☺️, Don't forget to like it and please also give your review in comment box..... Bye", k=smsg, 
-setTimeout(function(){$(".status").html("last seen today at "+time)},3000):
-//setTimeout(function(){$(".status").css("margin-left", "0")},8000)):
+setTimeout(function(){$(".status").html("last seen today at "+time)},3000),
+setTimeout(function(){$(".status").css("margin-left", "0")},8000)):
 isInArray(th, lastmsg)==true?(k="You're Welcome ", smsg=k+"😇"):
 isInArray(gm, lastmsg)==true?(k="Good Morning ", smsg=k+"😇"):
 isInArray(gn, lastmsg)==true?(smsg="Good night", k=smsg):
@@ -576,7 +576,8 @@ isInArray(codeArray, lastmsg)==true?(smsg="Thats nice. Did you like it?"):
 isInArray(hru, lastmsg)==true?(smsg="I'm good. Just got a code replicating Whatsapp. You're looking at my masterpiece right now!", k=smsg):
 //checking if user input including SEARCH keyword
 //search result using iframe 
-lastmsg.substring(0, 6)=="SEARCH"?(search=lastmsg.slice(7),smsg="<b align='center'>This are the top results </b><nav class='back'  onclick='history.back()'>&larr;</nav><nav class='forword' onclick='history.forward()'>&rarr;</nav><iframe style = 'z-index:1;overflow-x:scroll; overflow-y:scroll;' scrolling='yes' height='300px' width='100%' src='https://www.bing.com/search?q="+search+"'></iframe>",k="This are the, Top results" ):
+lastmsg.substring(0, 6)=="SEARCH"?(search=lastmsg.slice(7),smsg="<b align='center'>This are the top results </b><nav class='back'  onclick='history.back()'>&larr;</nav><nav class='forword' onclick='history.forward()'>&rarr;</nav><iframe style = 'z-index:1;overflow-x:scroll; overflow-y:scroll;' scrolling='yes' height='300px' width='100%' src='https://www.bing.com/search?q="+search+"'></iframe>",k="This are the, Top results" )://if user input didn't match with any pattern
+(smsg="Sorry, I have no answer for that. If you say so I can search for you. To search, <br> type <q><b> Search Your keyword </b></q> for example type : <b>Search Sololearn</b>",k="Sorry, I have no answer for that. ");
 //creating receiving msgs 
 para = $("<div class='message received'>"+smsg+"<span class='metadata'> <span class='time'>"+time+"</span></span></div>");
 //appending receiving msg
@@ -585,7 +586,7 @@ setTimeout(function() { $('#ap').append(para);
 $(".status").html("online");
 //autoscroll 
 $(".conversation-container").scrollTop(scroll);
-},2400);
+},1100);
 }
 //});
 });
