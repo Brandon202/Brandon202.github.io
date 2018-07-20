@@ -515,7 +515,7 @@ var p = "Kay-kay.";
  //matching with user input
  var hello=["HELLO","HI", "HELLO BRANDON","HEY THERE","HEY","HI DUDE","HI BRANDON"];
  var gm=["GM","GOOD MORNING","GOOD MORNING BRANDON", "GOOD MORNING BRANDON"];
- var bad=[/*"BAD","NOT BAD",*/"USELESS","NOT WORKING",/*"NOT GOOD"*/];
+ var bad=["USELESS","NOT WORKING"];
  var ge=["GOOD EVNG","GOOD EVENING","GOOD EVENING BRANDON","GOOD EVENING BRANDON"];
  var gn=["GOON NIGHT","I'M FEELING SLEEPY"];
  var welcome=["COOL", "NICE WORKING", "NICE CODE","NICE","WOW","WOW IT'S WORKING","GREAT CODE","AWESOME CODE","IT'S NICE","AWESOME CODE BRO","IT'S GOOD","OH MY GOD","OMG","OHO","NICE TO MEET YOU","NICE TO MEET U","NICE TO SEE YOU","NICE TO C U","YOU ARE GREAT", "YOU ARE AWESOME"];
@@ -532,7 +532,7 @@ var p = "Kay-kay.";
   var th=["THANKS","THANK YOU"];
   var st=["SHUT UP","SHUT YOUR MOUTH", "ZIP IT"];
   var qu=["WHAT","WHAT?","WHICH","WHICH?","WHEN","WHEN?","REALLY?"];
-  var ok=["HMM","HMMM","HMMMM","OKAY","OK","KK","OKK","OK?","OK ?","YEAH"];
+  var ok=["HMM","HMMM","HMMMM","OKAY","OK","KK","OKK","OK?","OK ?","YEAH", "I LOVE CODING"];
   var codes=["HTML", "CSS", "JS", "JAVASCRIPT", "PHP", "KOTLIN", "RUBY", "JQUERY", "GIT", "SWIFT", "C", "ANGULAR JS", "PYTHON", "BOOTSTRAP", "SQL", "JAVA", "ECMASCRIPT 6", "ECMASCRIPT6", "ES6", "C++"];
 var coding = "I STARTED TO LEARN";
 var codingConcat = [];
@@ -576,7 +576,7 @@ isInArray(codeArray, lastmsg)==true?(smsg="Thats nice. Did you like it?"):
 isInArray(hru, lastmsg)==true?(smsg="I'm good. Just got a code replicating Whatsapp. You're looking at my masterpiece right now!", k=smsg):
 //checking if user input including SEARCH keyword
 //search result using iframe 
-lastmsg.substring(0, 6)=="SEARCH"?(search=lastmsg.slice(7),smsg="<b align='center'>This are the top results </b><nav class='back'  onclick='history.back()'>&larr;</nav><nav class='forword' onclick='history.forward()'>&rarr;</nav><iframe style = 'z-index:1;overflow-x:scroll; overflow-y:scroll;' scrolling='yes' height='300px' width='100%' src='https://www.bing.com/search?q="+search+"'></iframe>",k="This are the, Top results" )://if user input didn't match with any pattern
+lastmsg.substring(0, 6)=="SEARCH"?(search=lastmsg.slice(7),smsg="<b align='center'>This are the top results </b><nav class='back'  onclick='history.back()'>&larr;</nav><nav class='forword' onclick='history.forward()'>&rarr;</nav><iframe style = 'z-index:1;overflow-x:scroll; overflow-y:scroll;' scrolling='yes' height='300px' width='100%' src='https://www.google.com/search?ie=UTF-8&client=tablet-android-samsung&source=android-browser&q="+search+"'></iframe>",k="This are the, Top results" )://if user input didn't match with any pattern
 (smsg="Sorry, I have no answer for that. If you say so I can search for you. To search, <br> type <q><b> Search Your keyword </b></q> for example type : <b>Search Github</b>",k="Sorry, I have no answer for that. ");
 //creating receiving msgs 
 para = $("<div class='message received'>"+smsg+"<span class='metadata'> <span class='time'>"+time+"</span></span></div>");
@@ -586,7 +586,7 @@ setTimeout(function() { $('#ap').append(para);
 $(".status").html("online");
 //autoscroll 
 $(".conversation-container").scrollTop(scroll);
-},2500);
+},2400);
 }
 //});
 });
