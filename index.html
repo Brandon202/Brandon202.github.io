@@ -533,7 +533,7 @@ var p = "Kay-kay.";
   var th=["THANKS","THANK YOU"];
   var st=["SHUT UP","SHUT YOUR MOUTH", "ZIP IT"];
   var qu=["WHAT","WHAT?","WHICH","WHICH?","WHEN","WHEN?","REALLY?"];
-  var ok=["HMM","HMMM","HMMMM","OKAY","OK","KK","OKK","OK?","OK ?","YEAH"];
+  var ok=["HMM","HMMM","HMMMM","OKAY","OK","KK","OKK","OK?","OK ?","YEAH", "I LOVE CODING"];
   var codes=["HTML", "CSS", "JS", "JAVASCRIPT", "PHP", "KOTLIN", "RUBY", "JQUERY", "GIT", "SWIFT", "C", "ANGULAR JS", "PYTHON", "BOOTSTRAP", "SQL", "JAVA", "ECMASCRIPT 6", "ECMASCRIPT6", "ES6", "C++"];
 var coding = "I STARTED TO LEARN";
 var codingConcat = [];
@@ -547,7 +547,7 @@ var codeArray = codingConcat;
 */
 var codeArray = codes.map( item => coding + " " + item);
 var funny=["YOU'RE FUNNY", "HA", "HA-HA", "NICE JOKE", "GOOD JOKE", "LOL"];
-var bad_expression = ["BAD", "NOT GOOD"]
+var bad_expression = ["BAD", "NOT GOOD", "TERRIBLE", "HORRIBLE"]
   //matching with user input
  function isInArray(x, y) { return x.indexOf(y) > -1; }
 isInArray(funny, lastmsg)==true?(smsg="I know, I'm so funny!"):
@@ -557,8 +557,8 @@ isInArray(wru, lastmsg)==true?(smsg="I am Brandon Paltoo, the most awesome coder
 isInArray(bad, lastmsg)==true?(smsg="Thanks for your precious feedback, I'll try to improve that.😇", k=smsg):
 isInArray(wrud, lastmsg)==true?(k="Nothing special and you? ", smsg=k+"☺️"):
 isInArray(bye, lastmsg)==true?(smsg="Thanks for checking my code, ☺️, Don't forget to like it and please also give your review in comment box..... Bye", k=smsg, 
-setTimeout(function(){$(".status").html("last seen today at "+time)},3000),
-setTimeout(function(){$(".status").css("margin-left", "0")},8000)):
+setTimeout(function(){$(".status").html("last seen today at "+time)},3000):
+//setTimeout(function(){$(".status").css("margin-left", "0")},8000)):
 isInArray(th, lastmsg)==true?(k="You're Welcome ", smsg=k+"😇"):
 isInArray(gm, lastmsg)==true?(k="Good Morning ", smsg=k+"😇"):
 isInArray(gn, lastmsg)==true?(smsg="Good night", k=smsg):
@@ -586,7 +586,7 @@ setTimeout(function() { $('#ap').append(para);
 $(".status").html("online");
 //autoscroll 
 $(".conversation-container").scrollTop(scroll);
-},1100);
+},2400);
 }
 //});
 });
