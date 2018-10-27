@@ -538,13 +538,6 @@ var p = "Kay-kay.";
 var coding = "I STARTED TO LEARN";
 var codingConcat = [];
 
-/*for(i=0;i<codes.length;i++){
- var temp = (coding + " " + codes[i]);
- codingConcat.push(temp);
-}
-
-var codeArray = codingConcat;
-*/
 var codeArray = codes.map( item => coding + " " + item);
 var funny=["YOU'RE FUNNY", "HA", "HA-HA", "NICE JOKE", "GOOD JOKE", "LOL"];
 var bad_expression = ["BAD", "NOT GOOD", "HORRIBLE", "TERRIBLE"]
@@ -573,6 +566,7 @@ isInArray(gaf, lastmsg)==true?(k="Good Afternoon",smsg=k+"😇"):
 isInArray(like, lastmsg)==true?(smsg=p, k=p):
 isInArray(good, lastmsg)==true?(smsg="Nice to hear it. 😊", k="Nice to hear it. "):
 isInArray(codeArray, lastmsg)==true?(smsg="Thats nice. Did you like it?"):
+isInArray(bad_expression, lastmsg)==true?(smsg="I hope you feel better!"):
 isInArray(hru, lastmsg)==true?(smsg="I'm good. Just got a code replicating Whatsapp. You're looking at my masterpiece right now!", k=smsg):
 //checking if user input including SEARCH keyword
 //search result using iframe 
